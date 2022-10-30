@@ -5,11 +5,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Landify</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.svg" alt="Landify logo" width="105" heigh="28">
+      </a>
+      <nav class="header__nav">
+        <h2 class="visually-hidden">Main navigation</h2>
+        <button class="menu-button">
+          <span class="visually-hidden">Menu button</span>
+          <span class="menu-button__item"></span>
+        </button>
+        <div class="menu-wrapper">
+          <ul class="main-menu">
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">About</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Products</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Pricing</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Blog</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Jobs</a>
+            </li>
+            <li class="main-menu__item main-menu__submenu__enabler">
+              <span class="main-menu__link">More</span>
+              <ul class="main-menu__submenu">
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu__link">Download Now</a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu__link">Licence</a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu__link">Features</a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu__link">Help</a>
+                </li>
+                <li class="main-menu__submenu__item">
+                  <a href="#" class="main-menu__submenu__link">Privacy Policy</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="downloads">
+            <li class="downloads__item">
+              <a href="https://play.google.com/" target="_blank" rel="noopener" class="downloads__link">
+                <img src="./img/google-play.svg" alt="Google Play" width="135" height="40">
+              </a>
+            </li>
+            <li class="downloads__item">
+              <a href="https://www.apple.com/" target="_blank" rel="noopener" class="downloads__link">
+                <img src="./img/app-store.svg" alt="App Store" width="135" height="40">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
+  <script defer src="js/script.min.js"></script>
 </body>
 
 </html>
+
+<!-- <svg class="icon"> 
+  <use xlink:href="#quote"></use>
+</svg><svg class="icon">
+  <use xlink:href="#icon1"></use>
+</svg> -->

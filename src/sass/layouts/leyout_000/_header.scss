@@ -1,0 +1,86 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  &__nav {
+    &_active {
+      .menu-wrapper {
+        left: 0;
+      }
+    }
+  }
+
+  .downloads {
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      &:not(:last-of-type) {
+        margin: 0 0 12px 0;
+      }
+    }
+  }
+}
+
+.logo-link {
+  display: flex;
+  z-index: 3;
+  margin-right: 32px;
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 15px 30px 15px;
+  background-color: $blue-white;
+  transition: left .2s ease;
+}
+
+.main-menu {
+  margin-bottom: 30px;
+
+  &__item,
+  &__submenu__item {
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link,
+  &__submenu__link {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: $brown;
+    text-decoration: none;
+    transition: color .25s ease;
+
+    &:hover,
+    &:focus {
+      color: $purple;
+    }
+  }
+
+  &__submenu {
+    &__enabler {
+      span {
+        display: none;
+      }
+    }
+  }
+}

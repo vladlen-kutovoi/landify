@@ -58,6 +58,6 @@ function watchFiles() {
   watch('./src/sass/**/*', styles);
   watch('./src/*.html', html);
   watch('./src/img/**/*', images);
-  watch('./src/script/**/*', scripts);
+  watch('./src/js/**/*', scripts);
 }
 exports.default = series(clean, parallel(html, styles, scripts, images), parallel(watchFiles, browserSync));
