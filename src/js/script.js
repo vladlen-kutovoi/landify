@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   toggleMobileMenu();
+  turnOnPhone();
 });
 
 function toggleMobileMenu() {
@@ -18,4 +19,15 @@ function toggleMobileMenu() {
       document.body.classList.remove('no-scroll');
     });
   });
+}
+
+function turnOnPhone() {
+  const PHONE = document.getElementById('phone');
+  const BUTTON = document.getElementById('hero-button');
+  PHONE.addEventListener('mouseover', playAnimation, ['once']);
+  BUTTON.addEventListener('mouseover', playAnimation, ['once']);
+  setTimeout(playAnimation, 5000);
+  function playAnimation() {
+    PHONE.classList.add('active');
+  }
 }

@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 5;
 
   .container {
     display: flex;
@@ -47,6 +48,7 @@
   padding: 100px 15px 30px 15px;
   background-color: $blue-white;
   transition: left .2s ease;
+  z-index: 2;
 }
 
 .main-menu {
