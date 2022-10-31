@@ -1,0 +1,23 @@
+.brands-section {
+  .container {
+    padding: 16px 15px;
+  }
+
+  .slider-wrapper {
+    max-width: 892px;
+    margin: 0 auto;
+    padding: 1px 0;
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+  }
+}
+
+.brands {
+  padding: 40px 0;
+  background-color: $white;
+
+  &__item {
+    display: inline-flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+}

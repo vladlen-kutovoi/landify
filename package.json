@@ -43,5 +43,8 @@
     "ios >= 7",
     "android >= 4",
     "bb >= 10"
-  ]
+  ],
+  "dependencies": {
+    "tiny-slider": "^2.9.4"
+  }
 }

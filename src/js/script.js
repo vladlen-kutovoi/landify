@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   toggleMobileMenu();
   turnOnPhone();
+  runSlider();
 });
 
 function toggleMobileMenu() {
@@ -26,8 +27,35 @@ function turnOnPhone() {
   const BUTTON = document.getElementById('hero-button');
   PHONE.addEventListener('mouseover', playAnimation, ['once']);
   BUTTON.addEventListener('mouseover', playAnimation, ['once']);
-  setTimeout(playAnimation, 5000);
+  setTimeout(playAnimation, 3500);
   function playAnimation() {
     PHONE.classList.add('active');
   }
+}
+
+function runSlider() {
+  let slider = tns({
+    container: '.brands',
+    items: 2,
+    gutter: 32,
+    controls: false,
+    nav: false,
+    speed: 1000,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    touch: false,
+    responsive: {
+      576: {
+        items: 3
+      },
+      768: {
+        items: 5
+      },
+      992: {
+        items: 6
+      }
+    }
+  });
 }
