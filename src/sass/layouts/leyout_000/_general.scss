@@ -18,6 +18,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: $manrope;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 .container {
@@ -39,4 +43,24 @@ body {
   &__link {
     display: flex;
   }
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 133%;
+  color: $brown;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 178%;
+  color: $brown;
+}
+
+.wrapper {
+  max-width: 540px;
 }
