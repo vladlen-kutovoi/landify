@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   toggleMobileMenu();
   turnOnPhone();
   runSlider();
+  runObserver();
 });
 
 function toggleMobileMenu() {
@@ -58,4 +59,23 @@ function runSlider() {
       }
     }
   });
+}
+
+function runObserver() {
+  function observerCallback(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('faded-in');
+      }
+    });
+  }
+  let observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1
+  }
+  const OBSERVER = new IntersectionObserver(observerCallback, observerOptions);
+
+  const TARGETS = document.querySelectorAll('.to-be-animated');
+  TARGETS.forEach(el => OBSERVER.observe(el));
 }

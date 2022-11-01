@@ -1,0 +1,16 @@
+.to-be-animated {
+  opacity: 0;
+  position: relative;
+  top: -50px;
+  transition: all .75s ease;
+  transition-delay: .2s;
+
+  &_delayed {
+    transition-delay: .4s;
+  }
+}
+
+.faded-in {
+  opacity: 1;
+  top: 0;
+}
