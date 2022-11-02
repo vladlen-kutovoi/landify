@@ -65,7 +65,12 @@ function runObserver() {
   function observerCallback(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('faded-in');
+        if (entry.target.classList.contains('to-be-animated')) {
+          entry.target.classList.add('faded-in');
+        };
+        if (entry.target.classList.contains('stats')) {
+          makeCounter();
+        }
       }
     });
   }
@@ -78,4 +83,44 @@ function runObserver() {
 
   const TARGETS = document.querySelectorAll('.to-be-animated');
   TARGETS.forEach(el => OBSERVER.observe(el));
+
+  const COUNTERS = document.querySelector('.stats');
+  OBSERVER.observe(COUNTERS);
+}
+
+function makeCounter() {
+  const counters = document.querySelectorAll('.stats__counter');
+  let speed = 500;
+  counters.forEach(counter => {
+    let count = +counter.innerText;
+    function updateCount() {
+      let target = +counter.getAttribute('data-target');
+      let inc = target / speed;
+      if (count < target) {
+        count += inc;
+        counter.innerText = addComaDivider(Math.ceil(count));
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = addComaDivider(target);
+      }
+    };
+
+    updateCount();
+  });
+
+  function addComaDivider(number) {
+    if (number >= 1000) {
+      let newNumber = number.toString();
+      let comas = 0;
+      for (let i = newNumber.length - 4; i >= 0; i--) {
+        if (!((newNumber.length - i - 1 - comas) % 3)) {
+          newNumber = newNumber.slice(0, i + 1) + ',' + newNumber.slice(i + 1);
+          comas++;
+        }
+      }
+      return newNumber;
+    } else {
+      return number;
+    }
+  }
 }

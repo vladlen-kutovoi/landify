@@ -63,4 +63,8 @@ p {
 
 .wrapper {
   max-width: 540px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
 }

@@ -27,10 +27,6 @@
     flex-direction: column;
     align-items: center;
     max-width: 445px;
-
-    &:not(:last-of-type) {
-      margin-bottom: 32px;
-    }
   }
 
   .heading {
@@ -91,6 +87,7 @@
       font-weight: 700;
       line-height: 156%;
       letter-spacing: 1px;
+      color: $brown;
     }
 
     &__title {

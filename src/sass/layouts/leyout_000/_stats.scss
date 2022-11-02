@@ -1,0 +1,63 @@
+.stats-section {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 82px 15px;
+  }
+
+  .heading {
+    margin-bottom: 7px;
+  }
+
+  .wrapper {
+    &:first-of-type {
+      text-align: center;
+      margin: 0 0 32px 0;
+    }
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 255px;
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $brown;
+  }
+
+  &__counter {
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 11px;
+
+    &_plus::after {
+      content: '+';
+    }
+
+    &_mill::after {
+      content: ' Million';
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

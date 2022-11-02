@@ -4,6 +4,10 @@
   .wrapper {
     margin: 0 auto 48px auto;
     text-align: center;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
   }
 
   .heading {
