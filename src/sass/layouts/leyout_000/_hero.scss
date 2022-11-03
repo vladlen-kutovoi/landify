@@ -52,30 +52,11 @@
   }
 
   .phone {
-    display: none;
     position: absolute;
     top: 57%;
     right: 50px;
     transform: translateY(-50%);
-    background-color: $black;
-    filter: drop-shadow(10px 14px 14px rgba(41, 41, 42, 0.5));
-    z-index: 4;
-
-    &::before {
-      content: url('../img/iphone.png');
-      position: absolute;
-      top: -19px;
-      left: -19px;
-      z-index: 7;
-    }
-
-    img {
-      opacity: 0;
-      transition: opacity .3s ease-out;
-    }
-
-    &.active img {
-      opacity: 1;
-    }
+    display: none;
+    width: 320px;
   }
 }

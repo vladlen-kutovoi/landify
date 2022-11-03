@@ -1,0 +1,13 @@
+.img-text-section {
+  .container {
+    flex-direction: row;
+
+    .phone-wrapper {
+      min-width: 540px;
+    }
+
+    .text-wrapper {
+      margin-bottom: 0;
+    }
+  }
+}

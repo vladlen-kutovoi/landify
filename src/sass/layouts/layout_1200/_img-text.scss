@@ -1,0 +1,15 @@
+.img-text-section {
+  .phone {
+    top: 540px;
+    transition: top 0.75s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  .phone-wrapper {
+    &.active {
+      .phone {
+        top: 56px;
+      }
+    }
+  }
+
+}

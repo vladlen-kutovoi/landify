@@ -67,10 +67,11 @@ function runObserver() {
       if (entry.isIntersecting) {
         if (entry.target.classList.contains('to-be-animated')) {
           entry.target.classList.add('faded-in');
-        };
-        if (entry.target.classList.contains('stats')) {
+        } else if (entry.target.classList.contains('stats')) {
           makeCounter();
-        }
+        } else if (entry.target.classList.contains('phone-wrapper')) {
+          entry.target.classList.add('active');
+        };
       }
     });
   }
@@ -83,6 +84,9 @@ function runObserver() {
 
   const TARGETS = document.querySelectorAll('.to-be-animated');
   TARGETS.forEach(el => OBSERVER.observe(el));
+
+  const PHONE_WRAPPERS = document.querySelectorAll('.phone-wrapper');
+  PHONE_WRAPPERS.forEach(el => OBSERVER.observe(el));
 
   const COUNTERS = document.querySelector('.stats');
   OBSERVER.observe(COUNTERS);
