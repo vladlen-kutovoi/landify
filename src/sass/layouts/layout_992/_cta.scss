@@ -1,0 +1,25 @@
+.cta-section {
+  .container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .phone-wrapper {
+    min-height: auto;
+  }
+
+  .phone {
+
+    &:nth-of-type(1) {
+      top: -161px;
+      left: 43px;
+    }
+
+    &:nth-of-type(2) {
+      top: auto;
+      right: auto;
+      left: 307px;
+      bottom: -128px;
+    }
+  }
+}
