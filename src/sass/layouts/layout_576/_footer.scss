@@ -3,3 +3,11 @@
     width: fit-content;
   }
 }
+
+.footer-menu {
+  &__item {
+    &_last {
+      flex-basis: 318px;
+    }
+  }
+}
