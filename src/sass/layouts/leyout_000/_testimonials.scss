@@ -2,23 +2,23 @@
   background-color: $lightest-blue;
 
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     padding: 120px 15px 80px 15px;
-    position: relative;
 
     &::before {
       content: '';
-      width: 143px;
-      height: 120px;
       position: absolute;
       left: 15px;
       transform: translateY(-50%);
+      z-index: 1;
+      width: 143px;
+      height: 120px;
       background-image: url('../img/quote.svg');
       background-size: 143px 120px;
-      z-index: 1;
     }
   }
 
@@ -34,8 +34,8 @@
   }
 
   .heading-wrapper {
-    margin-bottom: 24px;
     z-index: 2;
+    margin-bottom: 24px;
   }
 }
 
@@ -65,11 +65,11 @@
 
     &::before {
       content: '';
-      width: 16px;
-      height: 14px;
       position: absolute;
       top: 0;
       left: 0;
+      width: 16px;
+      height: 14px;
       background-image: url('../img/quote.svg');
       background-size: 16px 14px;
     }

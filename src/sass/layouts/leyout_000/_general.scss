@@ -24,6 +24,10 @@ body {
   }
 }
 
+main {
+  flex: 1;
+}
+
 .container {
   max-width: 1140px;
   padding: 0 15px;
@@ -47,8 +51,8 @@ body {
 }
 
 .cta-text {
-  margin-bottom: 8px;
   display: inline-block;
+  margin-bottom: 8px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

@@ -1,8 +1,8 @@
 .header {
   .container {
+    justify-content: flex-start;
     min-height: 72px;
     padding: 15px;
-    justify-content: flex-start;
   }
 
   .downloads {
@@ -22,19 +22,19 @@
 }
 
 .menu-wrapper {
+  position: static;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: static;
   min-height: auto;
   padding: 0;
   background-color: transparent;
 }
 
 .main-menu {
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 
   &__item {
 
@@ -49,11 +49,11 @@
   }
 
   &__submenu {
+    position: absolute;
+    left: -5px;
     display: none;
     flex-direction: column;
     width: 120px;
-    position: absolute;
-    left: -5px;
 
     &__item {
       width: 100%;
@@ -76,8 +76,8 @@
     }
 
     &__enabler {
-      padding-right: 12px;
       position: relative;
+      padding-right: 12px;
 
       &:hover,
       &:focus {
@@ -85,8 +85,8 @@
 
         span {
           &::after {
-            transform: rotate(-180deg);
             bottom: -2px;
+            transform: rotate(-180deg);
           }
         }
 
@@ -96,8 +96,8 @@
       }
 
       span {
-        display: list-item;
         position: relative;
+        display: list-item;
 
         &:hover,
         &:focus {
@@ -109,7 +109,7 @@
           position: absolute;
           right: -18px;
           bottom: 1px;
-          transition: all .25s ease;
+          transition: all 0.25s ease;
         }
       }
     }
