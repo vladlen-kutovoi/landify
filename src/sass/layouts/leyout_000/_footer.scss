@@ -12,16 +12,16 @@
   }
 
   .logo-link {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .cta-text {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: $light-gray;
   }
 
   .downloads-wrapper {
-    padding-right: 25px;
+    padding: 5px 25px 0 0;
   }
 
   .downloads {
@@ -38,10 +38,10 @@
 .footer-menu {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 6px;
 
   &__item {
-    margin-bottom: 12px;
+    margin-bottom: 23px;
 
     &:not(:last-of-type) {
       margin-right: 24px;
