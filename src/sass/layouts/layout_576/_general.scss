@@ -1,0 +1,9 @@
+  .downloads {
+    flex-direction: row;
+
+    &__item {
+      &:not(:last-of-type) {
+        margin: 0 12px 0 0;
+      }
+    }
+  }

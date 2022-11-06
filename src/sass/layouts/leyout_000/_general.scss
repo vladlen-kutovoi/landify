@@ -33,10 +33,11 @@ body {
 .downloads {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 12px;
+      margin-bottom: 12px;
     }
   }
 
@@ -45,10 +46,19 @@ body {
   }
 }
 
+.cta-text {
+  margin-bottom: 8px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: $brown;
+}
+
 .heading {
   font-style: normal;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 133%;
   color: $brown;
 }

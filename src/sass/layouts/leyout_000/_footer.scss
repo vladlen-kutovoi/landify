@@ -1,0 +1,76 @@
+.footer {
+  background-color: $dark-blue;
+
+  .container {
+    padding: 56px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    max-width: 475px;
+  }
+
+  .logo-link {
+    margin-bottom: 24px;
+  }
+
+  .cta-text {
+    margin-bottom: 16px;
+    color: $light-gray;
+  }
+
+  .downloads-wrapper {
+    padding-right: 25px;
+  }
+
+  .downloads {
+    flex-direction: column;
+
+    &__item {
+      &:not(:last-of-type) {
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  &__item {
+    margin-bottom: 12px;
+
+    &:not(:last-of-type) {
+      margin-right: 24px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: $white;
+      text-decoration: none;
+      transition: color 0.25s ease;
+
+      &:hover,
+      &:focus {
+        color: $light-purple;
+      }
+    }
+  }
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.copyright {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $light-gray;
+}
