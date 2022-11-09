@@ -123,14 +123,14 @@ p {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%) rotate(0);
-    transition: transform 0.25s ease;
+    transform: translateY(-50%);
+    transition: right 0.25s ease;
   }
 
   &:hover,
   &:focus {
     &::after {
-      transform: translateY(-50%) rotate(-180deg);
+      right: -10px;
     }
   }
 }
