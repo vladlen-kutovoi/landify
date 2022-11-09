@@ -17,3 +17,9 @@
     }
   }
 }
+
+.testimonial-card {
+  &_short {
+    max-width: 350px;
+  }
+}
