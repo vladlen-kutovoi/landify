@@ -52,12 +52,12 @@
 }
 
 .main-menu {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 
   &__item,
   &__submenu__item {
     &:not(:last-of-type) {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
 
@@ -79,6 +79,8 @@
   }
 
   &__submenu {
+    display: none;
+
     &__enabler {
       span {
         display: none;
