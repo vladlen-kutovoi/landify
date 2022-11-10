@@ -45,8 +45,9 @@
   left: 100%;
   z-index: 2;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 100px 15px 30px 15px;
+  overflow-y: auto;
   background-color: $blue-white;
   transition: left 0.2s ease;
 }
@@ -80,10 +81,49 @@
 
   &__submenu {
     display: none;
+    flex-direction: column;
+    width: 100%;
+
+    &.active {
+      display: flex;
+    }
 
     &__enabler {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
       span {
-        display: none;
+        position: relative;
+        display: list-item;
+        width: fit-content;
+
+        &:hover,
+        &:focus {
+          color: $brown;
+        }
+
+        &::after {
+          content: url('../img/shverone.svg');
+          position: absolute;
+          right: -18px;
+          bottom: 3px;
+          transition: all 0.25s ease;
+        }
+
+        &.active {
+          margin-bottom: 30px;
+
+          &::after {
+            bottom: -5px;
+            transform: rotate(-180deg);
+          }
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   toggleMobileMenu();
+  toggleMobileSubmenu();
   runSlider();
   runObserver();
 });
@@ -19,6 +20,28 @@ function toggleMobileMenu() {
       NAV.classList.remove('header__nav_active');
       document.body.classList.remove('no-scroll');
     });
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 992) {
+      document.body.classList.remove('no-scroll');
+    }
+  })
+}
+
+function toggleMobileSubmenu() {
+  const BUTTON = document.getElementById('submenu-enabler');
+  const SUBMENU = document.getElementById('submenu');
+  BUTTON.addEventListener('click', function () {
+    if (window.innerWidth < 992) {
+      SUBMENU.classList.toggle('active');
+      BUTTON.classList.toggle('active');
+    }
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 992) {
+      SUBMENU.classList.remove('active');
+      BUTTON.classList.remove('active');
+    }
   });
 }
 

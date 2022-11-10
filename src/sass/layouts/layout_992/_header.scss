@@ -26,9 +26,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: auto;
+  height: auto;
   padding: 0;
-  background-color: transparent;
+  overflow-y: initial;
+  background-color: unset;
 }
 
 .main-menu {
@@ -52,7 +53,6 @@
     position: absolute;
     left: -5px;
     display: none;
-    flex-direction: column;
     width: 120px;
 
     &__item {
@@ -77,11 +77,14 @@
 
     &__enabler {
       position: relative;
+      display: list-item;
       padding-right: 20px;
 
       &:hover,
       &:focus {
-        cursor: pointer;
+        .main-menu__submenu {
+          display: flex;
+        }
 
         span {
           &::after {
@@ -89,27 +92,11 @@
             transform: rotate(-180deg);
           }
         }
-
-        .main-menu__submenu {
-          display: flex;
-        }
       }
 
       span {
-        position: relative;
-        display: list-item;
-
-        &:hover,
-        &:focus {
-          color: $brown;
-        }
-
         &::after {
-          content: url('../img/shverone.svg');
-          position: absolute;
-          right: -18px;
           bottom: 1px;
-          transition: all 0.25s ease;
         }
       }
     }
